@@ -49,7 +49,7 @@ public class Parser {
 
 	}
 
-	public static void executeCommand2(Command command, Room currentRoom) {
+	public static Room executeCommand2(Command command, Room currentRoom) {
 		HashMap<String,Room> map = currentRoom.getExits();
 		if(!command.getCommand().equals("GO")){
 			System.out.println("This is not a valid command");
@@ -61,6 +61,7 @@ public class Parser {
 			else
 				System.out.println("No such direction");
 		}
+		return currentRoom;
 	}
 	
 	

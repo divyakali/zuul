@@ -70,7 +70,7 @@ public class Zuul {
 		if(command.getSecond() == null)
 			Parser.executeCommand(command);
 		else
-			Parser.executeCommand2(command,currentRoom);
+			currentRoom = Parser.executeCommand2(command,currentRoom);
 		}
 		}finally{
 			scanner.close();
